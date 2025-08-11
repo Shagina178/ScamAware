@@ -25,8 +25,23 @@
                     <input placeholder="Email address" type="email" id="email" name="email" required>
                 </div>
 
-                <div class="form-group">
-                    <input placeholder="Password" type="password" id="password" name="password" required>
+                <div class="form-group password-wrapper">
+                <input placeholder="Password" type="password" id="password" name="password" required>
+                <button type="button"
+                        class="toggle-password"
+                        aria-label="Show password"
+                        data-target="password">
+                        <!-- eye (visible) -->
+                        <svg class="icon-eye" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M2.458 12C3.732 7.943 7.523 5 12 5s8.268 2.943 9.542 7c-1.274 4.057-5.065 7-9.542 7S3.732 16.057 2.458 12z" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                        <circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                        </svg>
+                        <!-- eye-off (hidden by default) -->
+                        <svg class="icon-eye-off" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M3 3l18 18" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                        <path d="M10.94 10.94A3 3 0 0113.06 13.06" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                        </svg>
+                </button>
                 </div>
 
                 <button type="submit" class="auth-btn">Submit</button>
@@ -35,7 +50,6 @@
         </section>
     </main>
 
-    <!-- Link to your JavaScript file, 'defer' makes it load after the HTML -->
     <script src="js/validation.js" defer></script>
 </body>
 </html>

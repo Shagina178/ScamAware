@@ -1,11 +1,11 @@
-// Wait for the HTML document to be fully loaded
 document.addEventListener('DOMContentLoaded', () => {
     
     // Select the form and the password fields
-    const form = document.getElementById('registration-form');
+    const registrationForm = document.getElementById('registration-form');
+    const loginForm = document.getElementById('login-form');
     const password = document.getElementById('password');
     const confirmPassword = document.getElementById('confirmPassword');
-    const inputs = document.querySelectorAll("#registration-form input"); 
+    const inputs = document.querySelectorAll("#registration-form input, #login-form input"); 
     const toggles = document.querySelectorAll('.toggle-password');
 
     //Password visibility
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-    // Make placeholders disappear when typing
+    // Placeholders disappear when typing
     inputs.forEach(input => {
         input.addEventListener("input", function () {
             if (this.value.length > 0) {
@@ -39,22 +39,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Listen for the form's submit event
-    form.addEventListener('submit', (event) => {
-        
-        // Check if the password and confirm password fields do not match
-        if (password.value !== confirmPassword.value) {
-            
-            // Prevent the form from submitting
-            event.preventDefault();
-            
-            // Alert the user to the error
-            alert("Passwords do not match. Please try again.");
-
-            // Optional: Visual feedback
-            password.style.borderColor = 'red';
-            confirmPassword.style.borderColor = 'red';
-        }
-    });
+      // Only apply password match check on registration page
+    if (registrationForm) {
+        registrationForm.addEventListener('submit', (event) => {
+            if (password.value !== confirmPassword.value) {
+                event.preventDefault();
+                alert("Passwords do not match. Please try again.");
+                password.style.borderColor = 'red';
+                confirmPassword.style.borderColor = 'red';
+            }
+        });
+    }
 
 });

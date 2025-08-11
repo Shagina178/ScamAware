@@ -237,7 +237,7 @@ body {
 }
 
 
-/*Types*/
+/* Types */
 .page-title {
     text-align: center;
     font-size: 2.8rem;
@@ -301,7 +301,7 @@ body {
     line-height: 1.7;
 }
 
-/*Prevention*/
+/* Prevention */
 .prevention-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
