@@ -1,0 +1,455 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.graphic-side {
+    flex: 1;
+    background-color: #fb1900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.placeholder-graphic h1 {
+    font-size: 3em;
+}
+
+.form-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+form {
+    width: 80%;
+    max-width: 400px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 25px; 
+    box-sizing: border-box; 
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #f1c40f; 
+    box-shadow: 0 0 5px rgba(241, 196, 15, 0.5);
+}
+
+.auth-btn {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 25px;
+    background-color: #f1c40f; 
+    color: black;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.password-wrapper { position: relative; }
+
+.password-wrapper input {
+  width: 100%;
+  box-sizing: border-box;
+  padding-right: 44px;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  padding: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* SVG size */
+.toggle-password svg { width: 20px; height: 20px; }
+
+/* show only the "eye" by default, swap when .visible is present */
+.toggle-password .icon-eye-off { display: none; }
+.toggle-password.visible .icon-eye { display: none; }
+.toggle-password.visible .icon-eye-off { display: inline; }
+
+/*Home*/
+:root {
+    --primary-red: #ff0000;   
+    --accent-yellow: #FBC02D; 
+    --light-gray-bg: #EEEEEE; 
+    --dark-text: #212121;     
+    --white-text: #FFFFFF;
+    --font-main: 'Montserrat', sans-serif;
+}
+
+body {
+    font-family: var(--font-main);
+    margin: 0;
+    background-color: var(--white-text);
+    color: var(--dark-text);
+}
+
+/* --- HEADER AND NAVIGATION --- */
+.main-header {
+    background-color: var(--primary-red);
+    padding: 0.5rem 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav a {
+    color: var(--white-text);
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    display: block;
+    font-weight: 700;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.main-nav a.active {
+    background-color: var(--accent-yellow);
+    color: var(--dark-text);
+}
+
+.main-nav a:not(.active):hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* --- MAIN CONTENT AREA --- */
+.content-wrapper {
+    max-width: 1100px;
+    margin: 2rem auto; 
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.intro-section h1 {
+    font-size: 2.8rem;
+    font-weight: 900; 
+    color: var(--dark-text);
+}
+
+.intro-section p {
+    display: inline-block; 
+    max-width: 800px;
+    text-align: left;
+    line-height: 1;
+    margin-bottom: 5rem;
+}
+
+/* --- CARDS SECTION --- */
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    flex-wrap: wrap; 
+}
+
+.card {
+    background-color: var(--light-gray-bg);
+    border-radius: 20px;
+    text-decoration: none;
+    color: var(--dark-text);
+    font-weight: 700;
+    
+    /* Use flexbox to easily center the text vertically */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Sizing and aspect ratio */
+    flex-basis: 280px; 
+    height: 300px;
+    
+    padding: 1rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.card h2 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+/* --- FOOTER --- */
+.main-footer {
+    background-color: var(--primary-red);
+    color: var(--white-text);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 5rem;
+}
+
+
+/*Types*/
+.page-title {
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: 900;
+    margin-bottom: 3rem;
+    color: var(--dark-text);
+}
+
+.accordion-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.accordion-item {
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    overflow: hidden; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.accordion-button {
+    width: 100%;
+    background-color: var(--light-gray-bg);
+    border: none;
+    padding: 1.5rem;
+    text-align: left;
+    font-family: var(--font-main);
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--dark-text);
+    transition: background-color 0.3s ease;
+}
+
+.accordion-button:hover {
+    background-color: #e0e0e0; 
+}
+
+.accordion-button.active {
+    background-color: var(--accent-yellow);
+}
+
+.accordion-button i {
+    color: var(--primary-red);
+    font-size: 1.5rem;
+}
+
+.accordion-panel {
+    background-color: white;
+    padding: 0 1.5rem; 
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+}
+
+.accordion-panel p {
+    margin: 1.5rem 0;
+    line-height: 1.7;
+}
+
+/*Prevention*/
+.prevention-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.prevention-card {
+    background-color: var(--light-gray-bg);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.prevention-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+.prevention-card i {
+    font-size: 3rem;
+    color: var(--primary-red); 
+    margin-bottom: 1.5rem;
+}
+
+.prevention-card h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: var(--dark-text);
+}
+
+.prevention-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/*Contact us*/
+.contact-container {
+    display: flex;
+    gap: 5rem;
+    max-width: 1100px;
+    margin: 3rem auto 0 auto;
+    align-items: flex-start; 
+    flex-wrap: wrap; 
+}
+
+.contact-info, .contact-form-wrapper {
+    flex: 1;
+    min-width: 320px;
+}
+
+/* Left Column Styling */
+.contact-info {
+    text-align: center;
+}
+
+.contact-icon-wrapper {
+    font-size: 5rem;
+    color: var(--primary-red);
+    margin-bottom: 1.5rem;
+}
+
+.contact-info h2 {
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.contact-details {
+    text-align: left;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: var(--light-gray-bg);
+    border-radius: 8px;
+}
+.contact-details p {
+    margin: 0.5rem 0;
+}
+.contact-details i {
+    margin-right: 0.8rem;
+    color: var(--primary-red);
+}
+
+/* Right Column (Form) Styling */
+.contact-form-wrapper {
+    background-color: var(--light-gray-bg);
+    padding: 2.7rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--dark-text);
+    text-align: left;
+}
+
+.contact-form-wrapper input,
+.contact-form-wrapper textarea {
+    width: 480px;
+    padding: 0.8rem;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-family: var(--font-main);
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form-wrapper input:focus,
+.contact-form-wrapper textarea:focus {
+    outline: none;
+    border-color: var(--accent-yellow); 
+}
+
+.contact-form-wrapper textarea {
+    resize: vertical; 
+    min-height: 120px;
+}
+
+.submit-btn {
+   display: block; 
+    width: 480px; 
+    min-width: 150px; 
+    margin: 1.5rem auto 0 auto; 
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--primary-red);
+    color: var(--white-text);
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #A91D1D; 
+}

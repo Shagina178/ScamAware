@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scam Aware - Login</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <main class="container">
+        <!-- Left Side -->
+        <section class="graphic-side">
+            <div class="placeholder-graphic">
+                <img src="assets/salogo.png" alt="Scam Aware Graphic">
+            </div>
+        </section>
+
+        <!-- Right Side (Form) -->
+        <section class="form-side">
+            <form id="login-form" action="php/login.php" method="post">
+                <h2>Login</h2>
+
+                <div class="form-group">
+                    <input placeholder="Email address" type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <input placeholder="Password" type="password" id="password" name="password" required>
+                </div>
+
+                <button type="submit" class="auth-btn">Submit</button>
+                <p class="login-link">Don't have an account? <a href="registration.html">Register</a></p>
+            </form>
+        </section>
+    </main>
+
+    <!-- Link to your JavaScript file, 'defer' makes it load after the HTML -->
+    <script src="js/validation.js" defer></script>
+</body>
+</html>
