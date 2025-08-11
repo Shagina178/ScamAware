@@ -13,7 +13,7 @@ This is a full-stack web application designed to educate bank users about common
 
 ## Technologies Used
 
-**Front-End:** HTML5, CSS3, Vanilla JavaScript
+**Front-End:** HTML5, CSS3, JavaScript
 **Back-End:** PHP
 **Database:** MySQL
 **Local Development Environment:** XAMPP
